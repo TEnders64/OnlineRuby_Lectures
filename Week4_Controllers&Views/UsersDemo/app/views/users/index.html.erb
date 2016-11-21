@@ -1,0 +1,17 @@
+<%= content_for :left do %>
+<table>
+  <thead>
+    <th>Name</th>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+    <tr>
+      <td><%= user[:name] %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+<% end %>
+<%= content_for :right do %>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel accusamus reprehenderit officiis alias, repudiandae repellendus, velit delectus nostrum deserunt officia recusandae maiores rerum cupiditate harum ipsam doloremque. At, quo, inventore!</p>
+<% end %>
