@@ -11,7 +11,6 @@
 - TDD
   - Rails-Specific
 - AJAX & APIs
-- Ember
 
 ####Administrative Pieces
 - Ruby track unlocked?
