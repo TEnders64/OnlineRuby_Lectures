@@ -1,2 +1,14 @@
 <h1>Users Homepage</h1>
+<table>
+  <th>Name</th>
+  <th>Email</th>
+  <th>Age</th>
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.name %></td>
+      <td><%= user.email %></td>
+      <td><%= user.age %></td>
+    </tr>
+  <% end %>
+</table>
 <a href="/users/new">Create New User</a>

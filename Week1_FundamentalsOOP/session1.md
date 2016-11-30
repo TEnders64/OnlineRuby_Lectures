@@ -11,12 +11,12 @@
 - TDD
   - Rails-Specific
 - AJAX & APIs
+- Ember (time-permitting)
 
 ####Administrative Pieces
-- Ruby track unlocked?
+- Ruby Online track unlocked?
 - Slack (#Ruby-1 & #Ruby-2)
-- Classes are T/Th 6pm, W/F 2pm
-  - Thanksgiving week & week before Christmas: Monday 2pm, Tuesday 6pm, Wednesday 2pm (No Thursday or Friday Classes)
+- Classes are T/Th 4:30pm, W/F 3pm
 
 ##Ruby Installations
 - Reach out to me if you are having problems installing Ruby!
