@@ -4,10 +4,11 @@ class Coder < Human
     puts "I'm crushing some code!"
     talk
   end
-  def talk_2
+  def talk
     super
     puts "Codespeak"
   end
 end
-c = Coder.new("Todd", "Seattle")
-c.talk_2
+c = Coder.new("Todd")
+# c.code_like_crazy
+c.talk

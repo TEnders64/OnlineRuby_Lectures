@@ -23,6 +23,7 @@ Take about 30 minutes to...
 3. Create 1 User
 4. Create a Blog that is tied to User1 (There's more than one way to do it)
 5. Verify with Rails Console that User1 owns the first blog by saying `User.first.blogs` or `Blog.first.users` for example.  We should get a single user or blog as a result.  We are trying to avoid errors!!!!
+
 ![alt-text](BPM2.png)
 
 ####Results
@@ -71,7 +72,7 @@ class User < ActiveRecord::Base
   has_many :owners
 
   EMAIL_REGEX = /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]+)\z/i
-  validates :first_name, :last_name, :email_address, presence: true
+  validates :first_name, :last_name, presence: true
   validates :first_name, :last_name, length: {minimum: 2}
   validates :email_address, presence: true, uniqueness: { case_sensitive: false }, format: { with: EMAIL_REGEX }
 end

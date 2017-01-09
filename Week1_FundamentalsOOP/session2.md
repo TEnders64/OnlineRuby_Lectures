@@ -58,4 +58,4 @@ class FunFactory
 end
 ```
 
-####Demo: Names & MyEnumerable
+####Activity: Names & MyEnumerable

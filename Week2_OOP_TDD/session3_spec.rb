@@ -3,8 +3,8 @@ RSpec.describe Hash do
     @h = Hash.new
   end
   it 'tests that the key of name exists' do
-    @a[:age] = 100
-    expect(@a.age).to eq(100)
+    @h[:name] = "Todd"
+    expect(@h.has_key? :name).to eq(true)
   end
   it 'raises an error if trying to call a non-existent method' do
     expect{@h.fun_factory}.to raise_error(NoMethodError)

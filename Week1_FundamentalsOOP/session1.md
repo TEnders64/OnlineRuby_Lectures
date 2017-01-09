@@ -16,7 +16,7 @@
 ####Administrative Pieces
 - Ruby Online track unlocked?
 - Slack (#Ruby-1 & #Ruby-2)
-- Classes are T/Th 4:30pm, W/F 3pm
+- Classes are M/W 3:30pm, T/Th 5pm
 
 ##Ruby Installations
 - Reach out to me if you are having problems installing Ruby!

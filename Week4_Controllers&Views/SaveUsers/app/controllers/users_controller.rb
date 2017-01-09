@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   end
 
   def new
+    @user = User.new
   end
 
   def create
@@ -14,8 +15,16 @@ class UsersController < ApplicationController
       redirect_to "/"
     else
       flash[:errors] = user.errors.full_messages
-      redirect_to "/users/new"
+      @user = user
+      render :new
     end
+  end
+
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
   end
 
   private

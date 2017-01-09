@@ -11,17 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161117184024) do
+ActiveRecord::Schema.define(version: 20161216234447) do
 
   create_table "blogs", force: :cascade do |t|
-    t.string   "name"
+    t.string   "title"
     t.text     "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
 
   create_table "messages", force: :cascade do |t|
-    t.string   "author"
     t.text     "message"
     t.integer  "post_id"
     t.integer  "user_id"
@@ -60,6 +59,8 @@ ActiveRecord::Schema.define(version: 20161117184024) do
     t.string   "email_address"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.string   "password"
+    t.string   "nick_name"
   end
 
 end

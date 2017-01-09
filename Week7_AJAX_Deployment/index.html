@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pokemons API</title>
+  <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function(){
+      // $.ajax({
+      //   method: 'get',
+      //   url: 'http://pokeapi.co/api/v2/pokemon/1',
+      //   success: function(bulby){
+      //     // var html_str = "<h2>"+bulby.name+"</h2>";
+      //     // html_str += "<h2>"+bulby.weight+"</h2>";
+      //     // html_str += "<h2>"+bulby.height+"</h2>";
+      //     // $('body').html(html_str);
+      //   },
+      //   dataType: 'json'
+      // })
+
+      $('form').submit(function(){
+        var id = $(this).find('input[name=pokemon_id]').val()
+        $.ajax({
+          method: 'get',
+          url: 'http://pokeapi.co/api/v2/pokemon/'+id,
+          success: function(pokemon){
+            var html_str = "<h2>Name: "+pokemon.name+"</h2>";
+            html_str += "<h2>Weight: "+pokemon.weight+"</h2>";
+            html_str += "<h2>Height: "+pokemon.height+"</h2>";
+            $('div').html(html_str);
+          },
+          dataType: 'json'
+        })
+        return false;
+      })
+    })
+  </script>
+</head>
+<body>
+  <div>
+
+  </div>
+  <form action="" method="post">
+    <p>Number:<input type="number" name="pokemon_id" min="1" max="151"></p>
+    <input type="submit" value="Get Pokemon!">
+  </form>
+</body>
+</html>
