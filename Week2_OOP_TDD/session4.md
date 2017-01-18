@@ -13,5 +13,5 @@ def tester
   end
 end
 ```
-- Demo:
-  - Apple Tree
+Group Activity:
+ - Apple Tree
