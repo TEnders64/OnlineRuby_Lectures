@@ -1,18 +1,22 @@
 class Human
-  attr_accessor :name
-  def initialize name=nil, location=nil
+  
+  attr_accessor :name, :location
+  
+  def initialize name, location
     @name = name
     @location = location
   end
-  def talk
-    puts "My name is #{@name} from #{@location}"
-    self
-  end
-  def walk
-    puts "I'm walking here"
-    self
-  end
-end
 
-h = Human.new("Joy", "Starbucks")
-h.talk.talk.walk.talk.talk.walk
+  def who_am_i
+    puts "I am #{@name}"
+    #hey there's a bunch of code here
+    self
+  end
+
+  def method50
+    puts "METHOD 50"
+    self
+  end
+
+end
+h = Human.new("Todd")

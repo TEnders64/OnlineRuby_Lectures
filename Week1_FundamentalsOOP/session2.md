@@ -58,4 +58,10 @@ class FunFactory
 end
 ```
 
-####Activity: Names & MyEnumerable
+####Activity: Yields
+Let's build a Coders_Friend module in a Ruby file with a couple methods:
+1) <b>run_this</b> which is intended to take a code block and run it.
+2) <b>give_and_take</b> which is intended to take a code block AND pass a value back into the code block.
+Let's build a Coder class in a separate Ruby file that is given access to the Coders_Friend module
+1) Create a new instance of Coder by doing `Coder.new` and try to run the `run_this` function.
+2) Create another instance of Coder and try to execute the `give_and_take` method in a proper fashion.

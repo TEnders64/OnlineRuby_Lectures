@@ -91,9 +91,29 @@ Is that true though that a `Coder` can do everything a `Human` can?
 - What if we said coders should only be seen and not heard?
 
 ####Public, Private, Protected... Visibility
-- Everything is Public by default in Ruby Classes.  
-- Protected says 'my child classes can use these things but not their instances'
+- Everything is Public by default in Ruby Classes and is therefore accessible to the outside world  
+- Protected is more of a beast, so we'll learn Private and use it moreso than Protectedf
 - Private says 'not even my OWN instances can use these methods'
+
+####Private
+- Again, private says not even the class' own instances can use these methods!
+```ruby
+class Human
+  attr_accessor :name, :location
+  def initialize name, location
+    @name = name
+    @location = location
+  end
+  private
+  def talk
+    puts "My name is #{@name}"
+    self
+  end
+end
+h = Human.new("Todd", "Seattle")
+h.talk # FAIL!
+```
+####Protected
 Example:
 ```ruby
 class Human
@@ -122,24 +142,8 @@ end
 c = Coder.new("Todd", "Seattle")
 c.code_like_crazy
 ```
-Awesome! What about <b>private</b>?
-- Again, private says not even the class' own instances can use these methods!
-```ruby
-class Human
-  attr_accessor :name, :location
-  def initialize name, location
-    @name = name
-    @location = location
-  end
-  private
-  def talk
-    puts "My name is #{@name}"
-    self
-  end
-end
-h = Human.new("Todd", "Seattle")
-h.talk # FAIL!
-```
+- Yes we can.
+
 ####Super???
 Super is used when you have child classes with the same method name as a parent method, but you wish to call the parent's method as well.
 ```ruby

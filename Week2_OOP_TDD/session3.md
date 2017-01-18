@@ -60,3 +60,5 @@ RSpec.describe Hash do
   end
 end
 ```
+####Group Activity
+Take an existing Ruby class (head to ruby-doc.org) and write 3 separate tests that exemplify the way that class works, similar to how we did the Hash example above.

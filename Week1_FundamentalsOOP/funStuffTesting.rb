@@ -6,4 +6,4 @@ class FunFactory
 end
 
 FunFactory.new.makeFunHappen2
-FunFactory.new.makeFunHappen
+FunFactory.new.method50

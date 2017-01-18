@@ -59,3 +59,12 @@ class Human
   end
 end
 ```
+####Group Activity: Class Creation
+Create a class Student with the following criteria:
+- Have a name, favorite language, and skill level
+- Allow the favorite language to be editable but not the name nor the skill level
+- If a favorite language isn't given upon instantiation, make Ruby the default (how do we do this?)
+- The default skill level should be 100
+- Have a method called <b>talk</b> that prints the name of the student like so: "Hello, I'm Todd"
+- Have a method called <b>pick_up_stack</b> that takes an argument (which will be a string).  When invoked, print the argument given (which will most likely be something like "Ruby" or "Python") and then increase the skill level by 25
+- Set up both the <b>talk</b> and <b>pick_up_stack</b> methods so we can chain them like so: `Student.new(...).talk.pick_up_stack(...)`

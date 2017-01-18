@@ -17,4 +17,4 @@
 #
 # run_this_for_me {|val| puts val}
 # run_this_for_me {|val| puts "I'm a string but I need some dynamic values: #{val}"}
-print Array.ancestors, "\n"
+# print Array.ancestors, "\n"

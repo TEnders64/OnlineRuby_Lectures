@@ -3,7 +3,7 @@ module FunStuff
     puts "Making Fun Happen!"
   end
   def method50
-
+  	puts self
   end
 end
 
