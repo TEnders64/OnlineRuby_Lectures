@@ -1,12 +1,12 @@
-#AJAX with Rails
-####How Rails Does JSON & HTML (partials)
+# AJAX with Rails
+#### How Rails Does JSON & HTML (partials)
 In order to turn our backend into an API, we can return JSON-ified data instead of rendering entire views!
 ```ruby
 def greeting
   render json: {data: "Hello World"}
 end
 ```
-####What do we do with returned JSON data on the front-end?
+#### What do we do with returned JSON data on the front-end?
 1. Catch the JSON in a callback function
 ```javascript
   $(document).ready(function(){
@@ -26,7 +26,7 @@ end
 3. Update the DOM with the information!
   - How???
 
-####Activity: Create Our Own API
+#### Activity: Create Our Own API
 1. Make a rails app called `NumbersAPI`
 2. Have a single controller called Numbers with two methods: `index` and `numbers_getter`
 3. Your `numbers_getter` method should return a JSON with an array of numbers that you choose
@@ -34,7 +34,7 @@ end
 
 ![alt-text](numbers.png) or ![alt-text](numbers2.png)
 
-####How Does Rails do Partials?
+#### How Does Rails do Partials?
 Partials are smaller chunks of HTML that can be used anywhere in other views.  For example...
 
 What if we had a navbar that shows up in several of our pages?
@@ -70,13 +70,13 @@ We can certainly reuse a partial file instead of copy/pasting
 <h1>Welcome to the Index Page <%= @user.name %>!</h1>
 ```
 
-####Activity: Create a Partial
+#### Activity: Create a Partial
 - Create a partial of your own (be creative) and have it show up in the previous activity's `index.html.erb`
 - Need inspiration?
 
 ![alt-text](numbers3.png)
 
-####How Do We Render a Partial from a Controller Though?
+#### How Do We Render a Partial from a Controller Though?
 We don't always have to send back JSON from our server.  We can send HTML!
 
 The partial we just rendered was directly in the view and wasn't doing an AJAX call to do so.
@@ -85,7 +85,7 @@ What if...
 ```javascript
   $(document).ready(function(){
     $.get('/users/1', function(response){
-      console.log(response); // response ends up being the JSON-ified data!
+      console.log(response); // response ends up being an HTML string!
     }, 'html') // <=== note the 'html'
   })
 ```
@@ -99,4 +99,4 @@ end
 
 We could have a partial set up called `_user.html.erb` but be mindful where you save it.
 
-####Demo: Finish Up the Example Above
+#### Demo: Finish Up the Example Above

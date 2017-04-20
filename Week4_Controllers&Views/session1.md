@@ -52,11 +52,11 @@ end
 ```
 The beauty of using `rails g` to create our controllers, is that we get corresponding views created for us at the same time.  What else is great?  If we sent a `GET /users/index` right now, the index method would be ran and the <b>index.html.erb</b> file would be served back to the browser from the <b>app/views/users</b> folder!
 
-####Activity
-- Create a new Rails app with one Users controller with only an index and new method
-- Have the users index view have a greeting about users
-- Have the users new view have a form to create a new user.  Don't worry about where it goes just yet, just put a name and password in the form.
-- Try to navigate to 'users/index' and 'users/new' <b>WITHOUT</b> updating your routes file!
+####Activity - The Simpsons
+- Create a new Rails app with a Characters controller with only an index and new method
+- Have the index view have a greeting about Simpsons characters
+- Have the new view have a form to create a new character.  Don't worry about where it goes just yet, just put a first name, last name and workplace in the form.
+- Try to navigate to 'characters/index' and 'characters/new' <b>WITHOUT</b> updating your routes file!
   - Did it work? Why or why not?
 
 ####Views and Embedded Ruby
@@ -81,5 +81,5 @@ We didn't have to use the if statement but it is an example of how we can have R
 
 ####Activity
 Continuing with the previous activity...
-1. Update your index method in your Users controller to store an instance variable with whatever value you want.
+1. Update your index method in your Characters controller to store an instance variable with whatever value you want.
 2. Use ERB to print the value of that instance variable on the index.html.erb view file!

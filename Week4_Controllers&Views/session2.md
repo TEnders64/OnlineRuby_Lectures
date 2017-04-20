@@ -44,17 +44,16 @@ end
 ```
 <b>QUIZ</b> What is the above redirect doing and where is it going?  Will flash be available still?
 
-####Activity: Save a New User
-1. Create a new Rails project
-2. Create a User model based on the model below
-3. Create a Users controller with an index, new, and create method
-4. Build a form to save a new user (in `new.html.erb`) based on the model below
-5. Have the form <b>POST</b> to `/users`
+####Activity: Save a New Character
+
+![The Simpsons](SimpsonsAppDay1.png)
+
+1. Create a Character model based on the model below
+2. Build a form to create a new character (in `new.html.erb`) based on the model below
+3. Have the form <b>POST</b> to `/characters`
 ```ruby
-class User < ActiveRecord::Base
-  EMAIL_REGEX = /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]+)\z/i
-  validates :name, :email, :password, presence: true
-  validates :email, presence: true, uniqueness: { case_sensitive: false }, format: { with: EMAIL_REGEX }
+class Character < ActiveRecord::Base
+  validates :first_name, :last_name, :workplace, presence: true
 end
 ```
-6. Let's see where this takes us!
+4. Let's see where this takes us!

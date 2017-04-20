@@ -1,0 +1,17 @@
+User
+- first_name
+- last_name
+- birthdate
+- email
+- password
+
+===MANY TO MANY===
+Favorite_Film
+user_id
+film_id
+==================
+
+Film
+- title
+- genre
+- year

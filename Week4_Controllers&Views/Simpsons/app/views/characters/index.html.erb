@@ -1,0 +1,11 @@
+<h1>The Simpsons</h1>
+<table>
+<% @characters.each do |c| %>
+    <tr>
+        <td><%= c.first_name %></td>
+        <td><%= c.last_name %></td>
+        <td><%= c.workplace %></td>
+    </tr>
+<% end %>
+</table>
+<a href="/characters/new">New Character</a>

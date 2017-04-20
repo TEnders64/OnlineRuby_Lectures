@@ -1,0 +1,15 @@
+<h1>My Posts</h1>
+<div id="all_posts">
+<% @posts.each do |p| %>
+    <div class="post_it_note">
+        <%= p.content %>
+        <button data-post-id="<%= p.id %>">Delete</button>
+    </div>
+<% end %>
+</div>
+<h4>Add a Note:</h4>
+<form action="/posts" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <textarea name="content"></textarea>
+    <input type="submit" value="Post It!">
+</form>

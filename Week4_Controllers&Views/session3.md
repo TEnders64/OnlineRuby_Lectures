@@ -1,35 +1,14 @@
-#Rails Project: UsersApp
-####Product Backlog
-#####High Priority
-1. Display Users -- DONE
-- Show them on index view
-2. Add New Users -- DONE
-3. Hashing a form (improve our skills)
+#Rails Controllers & Views
+####Layouts
+Just **how do** those view files get loaded into well-formed HTML files?
 
-#####Lower Priority
-1. Validate Users
-  - Redirect if necessary
-  - Show validation errors
-    - Flash
-2. Form Helpers (Simple Form or Rails built-ins)
+`APPLICATION LAYOUT`
 
-Simple Form
-```
-<%= simple_form_for @product do |f| %>
-<%= f.association :category %>
-<%= f.input :name %>
-<%= f.input :description %>
-<%= f.input :pricing %>
-<%= f.button :submit %>
-<% end %>
-```
+####Custom Layouts
+####Activity: Let's build a custom 2-column layout.
 
-Form Helper (Rails)
-```
-<%= form_for @product, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
-  <%= f.text_field :title %>
-  <%= f.text_area :body, size: "60x12" %>
-  <%= f.submit "Create" %>
-<% end %>
-```
-3. Using Resources
+####Scenario
+How can we throw certain view files to one layout and other view files to the normal application layout?
+
+####Activity: Simpsons Day 2
+![The Simpsons](SimpsonsAppDay2.png)

@@ -20,9 +20,5 @@ class User < ...
 end
 ```
 
-####Activity! Blogs Posts Messages!
-Take about 20 minutes to work on...
-1. Creating the models
-2. Editing your model files
-3. Verify with Rails Console that Post.new returns a Post record with a blog_id
-![alt-text](BPM.png)
+####Activity! March Movie Madness!
+Let's build an application that helps people keep track of their favorite movies.
