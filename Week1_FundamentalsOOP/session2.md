@@ -1,6 +1,6 @@
-####More Ruby Fundamentals
+#### More Ruby Fundamentals
 
-####Revisiting Hashes & Hash Rockets
+#### Revisiting Hashes & Hash Rockets
 ```ruby
 person1 = {name: "Nathaniel"}
 person2 = {:name => "Joy"}
@@ -13,7 +13,7 @@ puts person3['name'] # Todd
 puts person4[:name] # Kris
 puts person4['name'] # nil
 ```
-####Revisiting Yields & Blocks
+#### Revisiting Yields & Blocks
 ```ruby
 def run_this_for_me
   yield 5
@@ -24,7 +24,7 @@ end
 run_this_for_me {|val| puts val}
 ```
 
-####String Interpolation
+#### String Interpolation
 ```ruby
 def run_this_for_me
   yield 5
@@ -34,15 +34,16 @@ end
 
 run_this_for_me {|val| puts "I'm a string but I need some dynamic values: #{val}"}
 ```
-<b>Note: This only works for double quotes</b>
+**Note: This only works for double quotes**
 
-####Modules & Ancestors
+#### Modules & Ancestors
 ```ruby
 puts Array.ancestors
 ```
 - Modules are like a handy toolbox, not necessarily meant for instantiating objects like a class would, but to be available to a class.
 - We can create modules and include them anywhere.  For example, the `Enumerable` module is available to arrays and hashes, because we want to be able to loop over those type of objects.
-<i>In fun.rb...</i>
+
+*In fun.rb...*
 ```ruby
 module FunStuff
   def makeFunHappen
@@ -50,7 +51,7 @@ module FunStuff
   end
 end
 ```
-<i>In funStuffTesting.rb...</i>
+*In funStuffTesting.rb...*
 ```ruby
 require_relative 'fun'
 class FunFactory
@@ -58,7 +59,7 @@ class FunFactory
 end
 ```
 
-####Activity: Yields
+#### Activity: Yields
 Let's build a Coders_Friend module in a Ruby file with a couple methods:
 1) <b>run_this</b> which is intended to take a code block and run it.
 2) <b>give_and_take</b> which is intended to take a code block AND pass a value back into the code block.

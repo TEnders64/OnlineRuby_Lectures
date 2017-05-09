@@ -7,6 +7,8 @@ $(document).ready(function(){
             data: $(this).serialize(),
             url: '/posts',
             success: function(response){
+                console.log($(this));
+                console.log(this);
                 console.log(response);
                 $('#all_posts').append(response);
             },
@@ -22,9 +24,10 @@ $(document).ready(function(){
                 // as soon as we jump into this function, we lose scope of the original button click function
                 // therefore, I needed to save a reference which_button to hang onto it.
                 // what scope are we in inside this success function? the WINDOW scope, as in, the browser WINDOW.
-
+                console.log($(this));
+                console.log(this);
                 if (response.status){
-                    $(which_button).parent().remove();
+                    $(this).parent().remove();
                     alert(response.message);
                 }
             },
@@ -33,4 +36,9 @@ $(document).ready(function(){
 
     })
 
+    function myFunc(){
+        console.log(this);
+    }
+
+    myFunc();
 })

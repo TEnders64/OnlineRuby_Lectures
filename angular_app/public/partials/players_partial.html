@@ -1,0 +1,12 @@
+<div>
+    <h2>Players Partial</h2>
+    <ul>
+        <li ng-repeat="player in players">{{player.first_name}} {{player.last_name}}</li>
+    </ul>
+    {{newPlayer}}
+    <p>First name</p>
+    <input ng-model="newPlayer.player.first_name">
+    <p>Last name</p>
+    <input ng-model="newPlayer.player.last_name">
+    <button ng-click="createPlayer()">Create Player</button>
+</div>

@@ -1,35 +1,39 @@
-#Welcome to Ruby!
+# Welcome to Ruby!
 
-####What We're Going To Cover
-- Ruby
+## Administrative Pieces
+- Ruby Online track unlocked?
+- Slack (#ruby-online)
+- Classes are M/T/W/Th 3:30pm
+
+## What We're Going To Cover
+Ruby
   - Fundamentals
   - OOP
-  - TDD
-- Rails
+
+Rails
   - Models
   - Controllers & Views
-- TDD
-  - Rails-Specific
-- AJAX & APIs
-- Ember (time-permitting)
 
-####Administrative Pieces
-- Ruby Online track unlocked?
-- Slack (#ruby-online & #ruby-everyone)
-- Classes are M/W 3:30pm, T/Th 5pm
+TDD
+  - Ruby OOP TDD
+  - Rails-Specific TDD
 
-##Ruby Installations
-- Reach out to me if you are having problems installing Ruby!
+AJAX & APIs
 
-####IRB
+Angular (time-permitting)
+
+## Vagrant Installations
+- Reach out to me if you are having problems installing Vagrant!
+
+## IRB
 - Ruby Interpreter
 - Python Shell anyone?
 
-####Ruby Fundamentals
+## Ruby Fundamentals
 - We still have loops, arrays, dictionaries (hashes), etc.
 - <b>EVERYTHING IS AN OBJECT!</b> just like in Python!
 
-####Iterating
+## Iterating
 ```ruby
 [1,2,3,4].each {|num| puts num }
 ```
@@ -41,25 +45,25 @@ for num in (0...4)
 end
 ```
 
-####Hashes
+## Hashes
 ```ruby
 person = {name: "Nathaniel"}
 puts person[:name]
 puts person['name']
 puts person.name
 ```
-#####Symbol Notation
-- A lot of the time in Ruby, we're going to be using symbol notation.
+## Symbol Notation
+A lot of the time in Ruby, we're going to be using symbol notation.
 `person[:name]` :name is a symbol and it's really important to use
 
-####Functions
+## Functions
 ```ruby
 def run how_far
   distance += how_far
 end
 ```
 
-####Yields
+## Yields
 ```ruby
 def run_this_for_me
   yield
